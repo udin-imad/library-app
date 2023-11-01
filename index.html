@@ -15,8 +15,10 @@
 </head>
 
 <body>
-  <h1>Table of Books</h1>
-  <p>Add your book collections to the table</p>
+  <div class="title header">
+    <h1>Table of Books</h1>
+    <p>Add your book collections to the table</p>
+  </div>
   <div class="container table">
     <table>
       <thead>
@@ -30,57 +32,40 @@
           <th>Read</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>
-            <input type="checkbox" name="" id="checkbox">
-          </td>
-          <td>The Hobit</td>
-          <td>J.R.R Toliken</td>
-          <td>295</td>
-          <td>
-            <button>Yes</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" name="" id="checkbox">
-          </td>
-          <td>The Lord of the Ring part 1</td>
-          <td>J.R.R Toliken</td>
-          <td>423</td>
-          <td>
-            <button>Yes</button>
-          </td>
-        </tr>
-      </tbody>
+      <tbody></tbody>
     </table>
   </div>
   <div class="container button">
-    <button id="add">Add New Book</button>
-    <button id="remove">Delete Book</button>
+    <button id="add">New Book</button>
+    <button id="remove">Delete</button>
   </div>
   <dialog modal>
     <form action="#" class="modal">
       <div class="title">
         <label for="title">Title</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" />
       </div>
       <div class="author">
         <label for="author">Author</label>
-        <input type="text" name="author" id="author">
+        <input type="text" name="author" id="author" />
       </div>
       <div class="number">
         <label for="pages">Pages</label>
-        <input type="number" name="pages" id="pages">
+        <input type="number" name="pages" id="pages" />
       </div>
       <div class="read">
         <label for="read" id="label-read">Have you read it?</label>
         <input type="checkbox" name="read" id="read">
       </div>
-      <button type="button">Submit</button>
+      <button type="button" id="submit">Submit</button>
     </form>
     <button id="close">X</button>
+  </dialog>
+  <dialog id="alert">
+    <div class="alert">
+      <h2>THIS BOOK ALREADY EXIST</h2>
+      <button id="close-alert">X</button>
+    </div>
   </dialog>
   <script src="JavaScript/scrpt.js"></script>
 </body>
