@@ -22,16 +22,20 @@ deleteButton.addEventListener('click', deleteBook);
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.isRead = function () {
-        return this.read ? 'Yes' : 'No'
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
+
+    isRead() {
+        return this.read ? 'Yes' : 'No';
+    };
 }
 
+// Event Handler
 function addBookToLibrary() {
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
